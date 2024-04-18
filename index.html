@@ -20,11 +20,15 @@
 <body>
     <div class="weather-app-container rounded-4 p-5">
        <!-- search box start -->
-       <div class="search-box-container">
-         <div class="search-box rounded-2 d-flex gap-1" role="searchbox">
-            <input type="text" placeholder="Search your city" class="py-2 px-3 rounded-2 border-0" role="search"/>
+       <div class="search-box-container d-flex flex-column flex-md-row gap-lg-5 row-gap-3">
+         <form autocomplete="off" id="form" class="search-box rounded-2 d-flex gap-1" role="searchbox">
+            <input type="text" placeholder="Search your city" value="Bangalore" class="py-2 px-3 rounded-2 border-0" id="city-name" role="search"/>
             <button type="submit" class="p-2 rounded-2 border-0"><i class="fa-solid fa-magnifying-glass"></i></button>
-         </div>
+         </form>
+
+         <div class="not-found-box d-flex justify-content-center align-items-center rounded-5">
+            <p class="city-message m-0 text-light px-4">City Not Found! </p>
+        </div>
        </div>
        <!-- search box end -->
 
@@ -32,43 +36,87 @@
        <div class="weather-portion container-fluid px-0 my-4">
          <div class="row w-100 h-100 d-flex m-0">
             <!-- left part  -->
-            <div class="left-part col-12 col-lg-5 rounded-4">
+            <div class="left-part col-12 col-lg-5 d-flex flex-column flex-md-row flex-lg-column rounded-4 position-relative">
+
+                <!-- upper portion -->
+                <div class="upper-portion d-flex flex-column align-items-center justify-content-center pt-4">
+                   <img src="" alt="" id="weather-icon">
+                   <p class="mt-2" id="weather-type">Sun with Cloud</p>
+                   <p id="date-time">Monday, 8 April 2024</p>
+                </div>
+
+                <!-- lower portion  -->
+                <div class="lower-portion d-flex flex-column align-items-center justify-content-center">
+                    <h2 id="temp"></h2>
+                    <p id="location">Bangalore, India</p>
+                </div>
+
                 
              </div>
 
              <!-- right part  -->
              <div class="right-part col-12 col-lg-7 rounded-4  px-0 ps-4">
                 <div class="container-fluid px-0 h-100 w-100">
-                    <div class="row row-cols-1 row-cols-2  row-gap-3 w-100 h-100 m-0">
+                    <div class="row row-cols-1 row-cols-md-2  row-gap-3 w-100 h-100 m-0">
                         <!-- weather part 1 -->
                         <div class="col px-2">
-                            <div class="weather-part-1 h-100 rounded-4">
-                                
+                            <div class="weather-part-1 h-100 rounded-4 p-3">
+                                <div class="title">
+                                    <p class="m-0">Wind</p>
+                                </div>
+                                <div class="body d-flex flex-column align-items-center justify-content-center">
+                                    <h2 id="wind-speed"></h2>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
 
                         <!-- weather part 2 -->
                         <div class="col px-2"> 
-                            <div class="weather-part-2 h-100 rounded-4">
-                                
+                            <div class="weather-part-2 h-100 rounded-4 p-3">
+                                <div class="title">
+                                    <p class="m-0">Feels Like</p>
+                                </div>
+                                <div class="body d-flex flex-column align-items-center justify-content-center">
+                                    <h2 id="feels-like"></h2>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                         <!-- weather part 3 -->
                         <div class="col  px-2">
-                            <div class="weather-part-3 h-100 rounded-4">
-                                
+                            <div class="weather-part-3 h-100 rounded-4 p-3">
+                                <div class="title">
+                                    <p class="m-0">Humidity</p>
+                                </div>
+                                <div class="body d-flex flex-column align-items-center justify-content-center">
+                                    <h2 id="humidity">25</h2>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                         <!-- weather part 4 -->
                         <div class="col px-2">
-                            <div class="weather-part-4 h-100 rounded-4">
-                                
+                            <div class="weather-part-4 h-100 rounded-4 p-3">
+                                <div class="title">
+                                    <p class="m-0">Visibility</p>
+                                </div>
+                                <div class="body d-flex flex-column align-items-center justify-content-center">
+                                    <h2 id="visibility"></h2>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                         <!-- weather part 5 -->
                         <div class="col px-2">
-                            <div class="weather-part-5 h-100 rounded-4">
-                                
+                            <div class="weather-part-5 h-100 rounded-4 p-3">
+                                <div class="title">
+                                    <p class="m-0">Pressure</p>
+                                </div>
+                                <div class="body d-flex flex-column align-items-center justify-content-center">
+                                    <h2 id="pressure"></h2>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                        
