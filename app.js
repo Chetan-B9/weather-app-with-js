@@ -5,6 +5,7 @@ const cityMessage = document.querySelector('.city-message');
 
 // weather icons 
 const weatherIcons = {
+   Clear: "Weather Icons/Icons type 2/sun.png",
    Clouds: "Weather Icons/Icons type 2/sun-cloud.png",
    Rain: "Weather Icons/Icons type 2/rain.png",
    Snow: "Weather Icons/Icons type 2/snow-cloud.png",
